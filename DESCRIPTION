@@ -1,0 +1,21 @@
+Package: usespandas
+Title: An example R package using reticulate that depends on pandas.
+Version: 1.0.0
+Authors@R: 
+    person(given = "Kevin",
+           family = "Ushey",
+           role = c("aut", "cre"),
+           email = "kevin@rstudio.com")
+Description: An example R package that 'Config/reticulate' to request that
+    the 'pandas' Python module be made available on load.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Config/reticulate:
+    list(
+        packages = list(
+            list(package = "pandas", pip = FALSE)
+        )
+    )
